@@ -214,9 +214,8 @@ def download(url, path, fname, redownload=True, disable_tqdm=False):
     Returns whether download actually happened or not
     """
     outfile = os.path.join(path, fname)
-    #download = not PathManager.isfile(outfile) or redownload
-    # don't download features
-    download = False
+    print(outfile)
+    download = not PathManager.isfile(outfile) or redownload
     retry = 5
     exp_backoff = [2 ** r for r in reversed(range(retry))]
 
