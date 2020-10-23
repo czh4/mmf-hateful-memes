@@ -53,7 +53,6 @@ class HatefulMemesBuilder(MMFDatasetBuilder):
                 "train.jsonl",
             )
         )
-        print(test_path)
         # NOTE: This doesn't check for files, but that is a fine assumption for now
         assert PathManager.exists(test_path), (
             "Hateful Memes Dataset doesn't do automatic downloads; please "
