@@ -14,18 +14,18 @@ dataset_config:
       - hateful_memes/defaults/images/
     features:
       train:
-      - hateful_memes/defaults/features/detectron.lmdb
+      - features/train.lmdb
       val:
-      - hateful_memes/defaults/features/detectron.lmdb
+      - features/dev.lmdb
       test:
-      - hateful_memes/defaults/features/detectron.lmdb
+      - features/test.lmdb
     annotations:
       train:
-      - hateful_memes/defaults/annotations/train.jsonl
+      - annotations/train.jsonl
       val:
-      - hateful_memes/defaults/annotations/dev_unseen.jsonl
+      - annotations/dev_unseen.jsonl
       test:
-      - hateful_memes/defaults/annotations/test_unseen.jsonl
+      - annotations/test_unseen.jsonl
     max_features: 100
     processors:
       text_processor:
