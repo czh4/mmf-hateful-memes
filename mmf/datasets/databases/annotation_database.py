@@ -19,7 +19,6 @@ class AnnotationDatabase(torch.utils.data.Dataset):
         self.metadata = {}
         self.config = config
         self.start_idx = 0
-        path = get_absolute_path(path)
         print(path)
         self.load_annotation_db(path)
 
