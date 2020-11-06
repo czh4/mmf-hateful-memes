@@ -46,9 +46,6 @@ class HatefulMemesBuilder(MMFDatasetBuilder):
         test_path = get_absolute_path(
             os.path.join(
                 data_dir,
-                "datasets",
-                self.dataset_name,
-                "defaults",
                 "annotations",
                 "train.jsonl",
             )
