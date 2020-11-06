@@ -93,11 +93,8 @@ class MMFDatasetBuilder(BaseDatasetBuilder):
 
         # We want to use root env data_dir so that we don't mix up our download
         # root dir with the dataset ones
-        download_path = os.path.join(
-            get_mmf_env("data_dir"), "datasets", dataset_name, dataset_variation
-        )
-        download_path = get_absolute_path(download_path)
-
+        download_path = get_absolute_path(get_mmf_env("data_dir"))
+        
         if not isinstance(resources, collections.abc.Mapping):
             self._download_resources(resources, download_path, version)
         else:
